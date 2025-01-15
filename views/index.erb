@@ -1,0 +1,28 @@
+<!DOCUTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title> <%= @title%> </title>
+    </head>
+    <body>
+        <% if @error_message %>
+            <p style="color: red;"><%= @error_message %></p>
+        <% end %>
+        <table>
+            <tr>
+                <th>User ID</th>
+                <th>Password</th>
+            </tr>
+            <form method="post" action="login">
+                <tr>
+                    <td><input type="text" name="username"></td>
+                    <td><input type="text" name="password"></td>
+                    <td><input type="submit" value="Log in"></td>
+                <tr>
+            </form>
+        </table>
+        <form method="get" action="signup">
+            <td><input type="submit" value="Sign up"></td>
+        </form>
+    </body>
+</html>
